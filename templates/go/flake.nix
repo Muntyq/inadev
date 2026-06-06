@@ -21,7 +21,7 @@
 						pkgs.delve
 					];
 					shellHook = ''
-						echo -e "\e[1m;94mGo $(go version)\e[0m"
+						echo -e "\e[1;94mGo $(go version)\e[0m"
 					'';
 				};
 			}

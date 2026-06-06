@@ -20,7 +20,7 @@
 						pkgs.lua-language-server
 					];
 					shellHook = ''
-						echo -e "\e[1m;34mLua $(lua -v)\e[0m"
+						echo -e "\e[1;34mLua $(lua -v)\e[0m"
 					'';
 				};
 			}

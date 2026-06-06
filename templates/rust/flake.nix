@@ -28,7 +28,7 @@
 						# pkgs.openssl # Needed only for some crates
 					];
 					shellHook = ''
-						echo -e "\e[1m;33mRust $(rustc --version)\e[0m"
+						echo -e "\e[1;33mRust $(rustc --version)\e[0m"
 					'';
 				};
 			}
