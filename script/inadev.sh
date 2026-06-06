@@ -60,6 +60,7 @@ case "$LANG" in
 
 ==================================
 EOF
+		cargo init
 		;;
 	c)
 		cat << 'EOF'
