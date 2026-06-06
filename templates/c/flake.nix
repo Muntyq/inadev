@@ -23,7 +23,7 @@
 						pkgs.clang-tools
 					];
 					shellHook = ''
-						echo "GCC $(gcc --version | head -1)"
+						echo "\e[1mGCC $(gcc --version | head -1)\e[0m"
 					'';
 				};
 			}

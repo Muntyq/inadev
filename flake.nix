@@ -17,7 +17,7 @@
 		) // {
 			templates = {
 				rust = {
-					path = ./templates/rust/;
+					path = ./templates/rust;
 					description = "Rust dev shell";
 					welcomeText = ''
 						==================================
@@ -33,7 +33,7 @@
 				};
 
 				c = {
-					path = ./templates/c/;
+					path = ./templates/c;
 					description = "C dev shell";
 					welcomeText = ''
 						====================
@@ -49,7 +49,7 @@
 				};
 
 				go = {
-					path = ./templates/go/;
+					path = ./templates/go;
 					description = "Go dev shell";
 					welcomeText = ''
 						===========================
@@ -65,7 +65,7 @@
 				};
 
 				lua = {
-					path = ./templates/lua/;
+					path = ./templates/lua;
 					description = "Lua dev shell";
 					welcomeText = ''
 						================================
