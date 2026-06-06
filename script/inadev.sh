@@ -104,6 +104,7 @@ nix flake init -t "$TEMPLATE"
 git add .
 direnv allow
 
+echo ""
 echo -e "Set-up complete, project '$NAME' initialized! \e[1;94m>ᴗ<\e[0m"
 echo ""
 echo -e "\e[3mRun 'git add flake.nix .envrc' if nix complains\e[0m"
