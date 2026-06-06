@@ -12,7 +12,7 @@
 				pkgs = import nixpkgs { inherit system; };
 			in {
 				packages.inadev = pkgs.writeShellScriptBin "inadev" (builtins.readFile ./script/inadev.sh);
-				packages.default = self.packages.${system}.inadev;
+				packages.default = self.packages.${pkgs.stdenv.hostPlatform.system}.inadev;
 			}
 		) // {
 			templates = {
