@@ -21,7 +21,6 @@
 						pkgs.delve
 					];
 					shellHook = ''
-						export DIRENV_LOG_FORMAT=""
 						echo "\e[1mGo $(go version)\e[0m"
 					'';
 				};

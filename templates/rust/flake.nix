@@ -28,7 +28,6 @@
 						# pkgs.openssl # Needed only for some crates
 					];
 					shellHook = ''
-						export DIRENV_LOG_FORMAT=""
 						echo -e "\e[1mRust $(rustc --version)\e[0m"
 					'';
 				};
