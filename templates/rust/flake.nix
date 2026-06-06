@@ -7,12 +7,31 @@
 			url = "github:oxalica/rust-overlay";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+		flake-utils.url = "github:numtide/flake-utils";
 	};
 
-	outpus = { self, nixpkgs, rust-overlay, ... };
-		let
-			systems = [ "x86_64-linux" "aarch64-linux" ];
-			overlays = [ rust-overlay.overlays.default ];
-		};
-		in {
-			devShells =
+	outputs = { self, nixpkgs, rust-overlay, flake-utils, ... }:
+		flake-utils.lib.eachDefaultSystem (system:
+			let
+				pkgs = import nixpkgs {
+					inherit system;
+					overlays = [ rust-overlay.overlays.default ];
+				};
+				rustToolchain = pkgs.rust-bin.stable.latest.default.override {
+					extensions = [ "rust-src" "rust-analyzer" ];
+				};
+			in {
+				devShells.default = pkgs.mkShell {
+					buildInputs = [
+						rustToolchain
+						pkgs.pkg-config
+						# pkgs.openssl # Needed only for some crates
+					];
+					shellHook = ''
+						echo "Rust $(rustc --version)"
+					'';
+				};
+			}
+		);
+}
+

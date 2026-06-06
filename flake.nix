@@ -12,19 +12,20 @@
 				path = ./templates/rust/;
 				description = "Rust dev shell";
 				welcomeText = ''
-		============================
-		 ____            _
-		|  _ \ _   _ ___| |_
-		| |_) | | | / __| __|
-		|  _ <| |_| \__ \ |_
-		|_| \_\\__,_|___/\__|
+					============================
+					 ____            _
+					|  _ \ _   _ ___| |_
+					| |_) | | | / __| __|
+					|  _ <| |_| \__ \ |_
+					|_| \_\\__,_|___/\__|
 
-		Rust dev shell ready!
-		============================
+					Rust dev shell ready!
+					============================
 
-		Run `direnv allow` to activate the environment.
-		Run `git add flake.nix .envrc` if nix complains.
-'';
+					Run `direnv allow` to activate the environment.
+					Run `git add flake.nix .envrc` if nix complains.
+					Add `pkgs.openssl` to buildInputs if cargo complains
+				'';
 			};
 
 			c = {
