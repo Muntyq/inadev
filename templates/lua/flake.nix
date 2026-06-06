@@ -20,6 +20,7 @@
 						pkgs.lua-language-server
 					];
 					shellHook = ''
+						export DIRENV_LOG_FORMAT=""
 						echo -e "\e[1mLua $(lua -v)\e[0m"
 					'';
 				};

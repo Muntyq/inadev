@@ -23,6 +23,7 @@
 						pkgs.clang-tools
 					];
 					shellHook = ''
+						export DIRENV_LOG_FORMAT=""
 						echo "\e[1mGCC $(gcc --version | head -1)\e[0m"
 					'';
 				};
