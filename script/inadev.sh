@@ -47,6 +47,8 @@ echo "Creating project '$NAME' with '$LANG' template..."
 
 mkdir "$NAME"
 cd "$NAME"
+git init
+nix flake init -t "$TEMPLATE"
 
 case "$LANG" in
 	rust)
@@ -100,13 +102,11 @@ EOF
 		;;
 esac
 
-git init
-nix flake init -t "$TEMPLATE"
 git add .
 direnv allow
 
 echo ""
-echo -e "Set-up complete, project '$NAME' initialized! \e[1;94m>ᴗ<\e[0m"
+echo -e "Set-up complete, project '$NAME' initialized! \e[1;94m>ヮ<\e[0m"
 echo ""
 echo -e "\e[3mRun 'git add flake.nix .envrc' if nix complains\e[0m"
 echo -e "\e[3mAdd 'pkgs.openssl' to buildInputs if cargo complains\e[0m"
