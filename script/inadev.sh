@@ -5,7 +5,7 @@ set -e
 REPO="github:Muntyq/inadev"
 LOCAL_PATH="$HOME/Projects/inadev"
 
-AVAIBLE_LANGS="rust go c lua"
+AVAILABLE_LANGS="rust go c lua"
 
 usage() {
 	echo "Usage: inadev <project_name> <lang> [--local]"
@@ -14,8 +14,8 @@ usage() {
 }
 
 list_langs() {
-	echo "Avaible templates for:"
-	for lang in $AVAIBLE_LANGS; do
+	echo "Available templates for:"
+	for lang in $AVAILABLE_LANGS; do
 		echo "   - $lang"
 	done
 	exit 0
